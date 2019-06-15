@@ -19,10 +19,6 @@ public class RangeController {
 
     @PostMapping("/upper-number")
     ResponseEntity setRangeUpperNumber(@Valid @RequestBody UpperNumberRequest request) {
-        if (request.getUpperNumber() == null) {
-            return ResponseEntity.badRequest().body("upperNumber cannot be null");
-        }
-
         LOG.info("Request with body {}", request);
         return ResponseEntity.ok(null);
     }
