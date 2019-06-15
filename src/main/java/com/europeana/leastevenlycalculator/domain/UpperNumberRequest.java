@@ -7,14 +7,14 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
-public class UpperRangeRequest {
+public class UpperNumberRequest {
     @NotNull
     @Max(25)
     @Min(1)
     private Integer upperNumber;
 
     @JsonCreator
-    public UpperRangeRequest(@JsonProperty("upperNumber") Integer upperNumber) {
+    public UpperNumberRequest(@JsonProperty("upperNumber") Integer upperNumber) {
         super();
         this.upperNumber = upperNumber;
     }
