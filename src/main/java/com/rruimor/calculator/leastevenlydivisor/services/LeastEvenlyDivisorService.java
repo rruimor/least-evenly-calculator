@@ -5,5 +5,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface LeastEvenlyDivisorService {
-    CalculationResult findSmallestMultiple(int number);
+    CalculationResult findSmallestMultiple(int upperRangeValue);
 }

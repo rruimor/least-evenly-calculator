@@ -28,6 +28,7 @@ public class LeastEvenlyDivisorController {
         int upperNumber = this.upperRange.getValue();
         LOG.info("Starting calculation with upper range: {}", upperNumber);
         CalculationResult result = this.leastEvenlyDivisorService.findSmallestMultiple(upperNumber);
+        LOG.info("Calculation result: {}", result);
         return ResponseEntity.ok().body(result);
     }
 
@@ -35,7 +36,7 @@ public class LeastEvenlyDivisorController {
     ResponseEntity setRangeUpperNumber(@Valid @RequestBody UpperRange request) {
         LOG.info("Request with body {}", request);
         this.upperRange.setValue(request.getValue());
-        LOG.info("New upper number set to {}", this.upperRange.getValue());
+        LOG.info("Upper number set to {}", this.upperRange.getValue());
         return ResponseEntity.ok(null);
     }
 }

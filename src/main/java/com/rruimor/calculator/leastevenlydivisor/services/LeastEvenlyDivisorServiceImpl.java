@@ -12,10 +12,11 @@ public class LeastEvenlyDivisorServiceImpl implements LeastEvenlyDivisorService 
     private static final double NANOSECONDS_TO_SECONDS = 1_000_000_000.0;
 
     @Override
-    public CalculationResult findSmallestMultiple(int number) {
+    public CalculationResult findSmallestMultiple(int upperRangeValue) {
         long startTime = System.nanoTime();
-        Long result = LeastMultipleOfRangeCalculator.findSmallestMultiple(number);
+        Long result = LeastMultipleOfRangeCalculator.findSmallestMultiple(upperRangeValue);
         long durationInNanoSeconds = System.nanoTime() - startTime;
-        return new CalculationResult(result, BigDecimal.valueOf(durationInNanoSeconds / NANOSECONDS_TO_SECONDS));
+        BigDecimal durationInSeconds = BigDecimal.valueOf(durationInNanoSeconds / NANOSECONDS_TO_SECONDS);
+        return new CalculationResult(result, durationInSeconds);
     }
 }
