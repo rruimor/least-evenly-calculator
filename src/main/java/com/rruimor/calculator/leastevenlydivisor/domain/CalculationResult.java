@@ -32,4 +32,12 @@ public class CalculationResult {
     public void setTimeElapsedInSeconds(BigDecimal timeElapsedInSeconds) {
         this.timeElapsedInSeconds = timeElapsedInSeconds;
     }
+
+    @Override
+    public String toString() {
+        return "CalculationResult{" +
+                "result=" + result +
+                ", timeElapsedInSeconds=" + timeElapsedInSeconds +
+                '}';
+    }
 }

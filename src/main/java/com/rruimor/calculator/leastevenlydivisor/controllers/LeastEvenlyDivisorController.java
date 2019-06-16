@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
+import static org.springframework.http.MediaType.APPLICATION_XML_VALUE;
+
 @RestController
 @RequestMapping("/least-evenly-divisor")
 public class LeastEvenlyDivisorController {
@@ -23,13 +26,14 @@ public class LeastEvenlyDivisorController {
         this.upperRange = upperRange;
     }
 
-    @GetMapping
-    ResponseEntity getLeastEvenlyDivisor() {
+    @GetMapping(produces = {APPLICATION_JSON_VALUE, APPLICATION_XML_VALUE})
+    @ResponseBody
+    CalculationResult getLeastEvenlyDivisor() {
         int upperNumber = this.upperRange.getValue();
         LOG.info("Starting calculation with upper range: {}", upperNumber);
         CalculationResult result = this.leastEvenlyDivisorService.findSmallestMultiple(upperNumber);
         LOG.info("Calculation result: {}", result);
-        return ResponseEntity.ok().body(result);
+        return result;
     }
 
     @PostMapping("upper-range")

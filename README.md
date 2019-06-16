@@ -12,13 +12,18 @@ a sequential range of positive integers (from 1 to 25).
 
 ## Steps
 
-* To start the web application
+* To start the web application (by default on port 8080)
 
 ```bash
 $ mvn spring-boot:run 
 ```
 
-By default it runs on port 8080.
+
+* To run the tests
+
+```bash
+$ mvn test
+```
 
 # Usage
 
