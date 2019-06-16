@@ -1,4 +1,4 @@
-package com.rruimor.calculator.leastevenlydivisor.models;
+package com.rruimor.calculator.leastevenlydividable.models;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

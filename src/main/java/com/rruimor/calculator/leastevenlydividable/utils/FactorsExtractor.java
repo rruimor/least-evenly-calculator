@@ -1,4 +1,4 @@
-package com.rruimor.calculator.leastevenlydivisor.utils;
+package com.rruimor.calculator.leastevenlydividable.utils;
 
 import java.util.ArrayList;
 import java.util.List;

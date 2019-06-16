@@ -1,8 +1,8 @@
-package com.rruimor.calculator.leastevenlydivisor.controllers;
+package com.rruimor.calculator.leastevenlydividable.controllers;
 
-import com.rruimor.calculator.leastevenlydivisor.domain.CalculationResult;
-import com.rruimor.calculator.leastevenlydivisor.models.UpperRange;
-import com.rruimor.calculator.leastevenlydivisor.services.LeastEvenlyDivisorService;
+import com.rruimor.calculator.leastevenlydividable.domain.CalculationResult;
+import com.rruimor.calculator.leastevenlydividable.models.UpperRange;
+import com.rruimor.calculator.leastevenlydividable.services.LeastEvenlyDividableService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -15,14 +15,14 @@ import static org.springframework.http.MediaType.APPLICATION_XML_VALUE;
 
 @RestController
 @RequestMapping("/least-evenly-divisor")
-public class LeastEvenlyDivisorController {
+public class LeastEvenlyDividableController {
 
-    private static final Logger LOG = LoggerFactory.getLogger(LeastEvenlyDivisorController.class);
-    private LeastEvenlyDivisorService leastEvenlyDivisorService;
+    private static final Logger LOG = LoggerFactory.getLogger(LeastEvenlyDividableController.class);
+    private LeastEvenlyDividableService leastEvenlyDividableService;
     private UpperRange upperRange;
 
-    public LeastEvenlyDivisorController(LeastEvenlyDivisorService leastEvenlyDivisorService, UpperRange upperRange) {
-        this.leastEvenlyDivisorService = leastEvenlyDivisorService;
+    public LeastEvenlyDividableController(LeastEvenlyDividableService leastEvenlyDividableService, UpperRange upperRange) {
+        this.leastEvenlyDividableService = leastEvenlyDividableService;
         this.upperRange = upperRange;
     }
 
@@ -31,7 +31,7 @@ public class LeastEvenlyDivisorController {
     CalculationResult getLeastEvenlyDivisor() {
         int upperNumber = this.upperRange.getValue();
         LOG.info("Starting calculation with upper range: {}", upperNumber);
-        CalculationResult result = this.leastEvenlyDivisorService.findSmallestMultiple(upperNumber);
+        CalculationResult result = this.leastEvenlyDividableService.findSmallestMultiple(upperNumber);
         LOG.info("Calculation result: {}", result);
         return result;
     }

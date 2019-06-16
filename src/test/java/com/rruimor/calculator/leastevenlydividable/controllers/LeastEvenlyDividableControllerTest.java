@@ -1,9 +1,9 @@
-package com.rruimor.calculator.leastevenlydivisor.controllers;
+package com.rruimor.calculator.leastevenlydividable.controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.rruimor.calculator.leastevenlydivisor.domain.CalculationResult;
-import com.rruimor.calculator.leastevenlydivisor.models.UpperRange;
-import com.rruimor.calculator.leastevenlydivisor.services.LeastEvenlyDivisorService;
+import com.rruimor.calculator.leastevenlydividable.domain.CalculationResult;
+import com.rruimor.calculator.leastevenlydividable.models.UpperRange;
+import com.rruimor.calculator.leastevenlydividable.services.LeastEvenlyDividableService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class LeastEvenlyDivisorControllerTest {
+public class LeastEvenlyDividableControllerTest {
 
     @Autowired
     private MockMvc mvc;
@@ -34,11 +34,11 @@ public class LeastEvenlyDivisorControllerTest {
     ObjectMapper objectMapper;
 
     @MockBean
-    private LeastEvenlyDivisorService leastEvenlyDivisorService;
+    private LeastEvenlyDividableService leastEvenlyDividableService;
 
     @Test
     public void getLeastEvenlyDivisor() throws Exception {
-        given(leastEvenlyDivisorService.findSmallestMultiple(1))
+        given(leastEvenlyDividableService.findSmallestMultiple(1))
                 .willReturn(new CalculationResult(12345L, BigDecimal.ONE));
 
         RequestBuilder request = get("/least-evenly-divisor");
@@ -53,7 +53,7 @@ public class LeastEvenlyDivisorControllerTest {
     public void getLeastEvenlyDivisorXML() throws Exception {
         CalculationResult result = new CalculationResult(12345L, BigDecimal.ONE);
 
-        given(leastEvenlyDivisorService.findSmallestMultiple(1))
+        given(leastEvenlyDividableService.findSmallestMultiple(1))
                 .willReturn(result);
 
         RequestBuilder request = get("/least-evenly-divisor")

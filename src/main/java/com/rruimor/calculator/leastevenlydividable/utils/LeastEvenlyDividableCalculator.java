@@ -1,20 +1,20 @@
-package com.rruimor.calculator.leastevenlydivisor.utils;
+package com.rruimor.calculator.leastevenlydividable.utils;
 
 import java.util.Collections;
 import java.util.List;
 
-import static com.rruimor.calculator.leastevenlydivisor.utils.ListCounter.getFrequency;
+import static com.rruimor.calculator.leastevenlydividable.utils.ListCounter.getFrequency;
 
-public final class LeastMultipleOfRangeCalculator {
+public final class LeastEvenlyDividableCalculator {
 
-    private LeastMultipleOfRangeCalculator() {}
+    private LeastEvenlyDividableCalculator() {}
 
 
     /**
      * @param upperRange Upper range number to be checked
      * @return the smallest number which is evenly divisible by all integers from 1 to {@code upperRange}
      */
-    public static long findSmallestMultiple(int upperRange) {
+    public static long findLeastEvenlyDividableForRange(int upperRange) {
         List<Integer> resultFactors = Collections.emptyList();
 
         for (int i = 1; i <= upperRange; i++) {
