@@ -1,6 +1,6 @@
-package com.rruimor.calculator.leastevenlydividable.services;
+package com.rruimor.calculator.leastevenlydivisible.services;
 
-import com.rruimor.calculator.leastevenlydividable.domain.CalculationResult;
+import com.rruimor.calculator.leastevenlydivisible.domain.CalculationResult;
 import org.springframework.stereotype.Service;
 
 @Service

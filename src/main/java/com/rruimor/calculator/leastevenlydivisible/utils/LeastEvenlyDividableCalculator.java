@@ -1,9 +1,9 @@
-package com.rruimor.calculator.leastevenlydividable.utils;
+package com.rruimor.calculator.leastevenlydivisible.utils;
 
 import java.util.Collections;
 import java.util.List;
 
-import static com.rruimor.calculator.leastevenlydividable.utils.ListCounter.getFrequency;
+import static com.rruimor.calculator.leastevenlydivisible.utils.ListCounter.getFrequency;
 
 public final class LeastEvenlyDividableCalculator {
 

@@ -30,7 +30,7 @@ $ mvn test
 
 ### Set upper range number
 
-To set the upper range number to be checked, send a **POST** request to `/least-evenly-divisor/upper-range` with the following JSON payload:
+To set the upper range number to be checked, send a **POST** request to `/least-evenly-divisible/upper-range` with the following JSON payload:
 
 ```json
 {
@@ -40,7 +40,7 @@ To set the upper range number to be checked, send a **POST** request to `/least-
 
 * Curl example request for setting the upper range number:
 ```bash
-$ curl -d '{"value":10}' -H "Content-Type: application/json" --cookie-jar - http://localhost:8080/least-evenly-divisor/upper-range
+$ curl -d '{"value":10}' -H "Content-Type: application/json" --cookie-jar - http://localhost:8080/least-evenly-divisible/upper-range
 ```
 will output
 ```sh
@@ -51,15 +51,15 @@ will output
 #HttpOnly_localhost	FALSE	/	FALSE	0	JSESSIONID	3DC0953D380710E33EB462DA67B38C44
 ```
 
-### Find the smallest dividable number 
+### Find the smallest divisible number 
 
-To get the calculation result and the time elapsed, send a **GET** request to `/least-evenly-divisor`.
+To get the calculation result and the time elapsed, send a **GET** request to `/least-evenly-divisible`.
 
 As the upper range number is stored in the session, you would need to pass the **JSESSIONID** cookie for getting the calculation.
 
 * Curl example request for finding the number:
 ```bash
-$ curl --cookie JSESSIONID=<YOUR_JSESSION_ID> -H "Accept: application/json" -X GET http://localhost:8080/least-evenly-divisor
+$ curl --cookie JSESSIONID=<YOUR_JSESSION_ID> -H "Accept: application/json" -X GET http://localhost:8080/least-evenly-divisible
 ```
 
 ```json
@@ -71,7 +71,7 @@ $ curl --cookie JSESSIONID=<YOUR_JSESSION_ID> -H "Accept: application/json" -X G
 
 * Or in XML:
 ```bash
-$ curl --cookie JSESSIONID=<YOUR_JSESSION_ID> -H "Accept: application/xml" -X GET http://localhost:8080/least-evenly-divisor
+$ curl --cookie JSESSIONID=<YOUR_JSESSION_ID> -H "Accept: application/xml" -X GET http://localhost:8080/least-evenly-divisible
 ```
 
 ```xml

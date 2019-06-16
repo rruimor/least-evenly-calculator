@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.europeana</groupId>
-	<artifactId>leastevenlydividable</artifactId>
+	<artifactId>leastevenlydivisible</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>least-evenly-dividable</name>
+	<name>least-evenly-divisible</name>
 	<description>Test Java project</description>
 
 	<properties>

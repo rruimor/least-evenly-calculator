@@ -1,4 +1,4 @@
-package com.rruimor.calculator.leastevenlydividable.utils;
+package com.rruimor.calculator.leastevenlydivisible.utils;
 
 import org.junit.Test;
 

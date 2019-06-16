@@ -1,9 +1,9 @@
-package com.rruimor.calculator.leastevenlydividable.controllers;
+package com.rruimor.calculator.leastevenlydivisible.controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.rruimor.calculator.leastevenlydividable.domain.CalculationResult;
-import com.rruimor.calculator.leastevenlydividable.models.UpperRange;
-import com.rruimor.calculator.leastevenlydividable.services.LeastEvenlyDividableService;
+import com.rruimor.calculator.leastevenlydivisible.domain.CalculationResult;
+import com.rruimor.calculator.leastevenlydivisible.models.UpperRange;
+import com.rruimor.calculator.leastevenlydivisible.services.LeastEvenlyDividableService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class LeastEvenlyDividableControllerTest {
+public class LeastEvenlyDivisibleControllerTest {
 
     @Autowired
     private MockMvc mvc;
@@ -41,7 +41,7 @@ public class LeastEvenlyDividableControllerTest {
         given(leastEvenlyDividableService.findSmallestMultiple(1))
                 .willReturn(new CalculationResult(12345L, BigDecimal.ONE));
 
-        RequestBuilder request = get("/least-evenly-divisor");
+        RequestBuilder request = get("/least-evenly-divisible");
 
         this.mvc.perform(request)
                 .andExpect(status().isOk())
@@ -56,7 +56,7 @@ public class LeastEvenlyDividableControllerTest {
         given(leastEvenlyDividableService.findSmallestMultiple(1))
                 .willReturn(result);
 
-        RequestBuilder request = get("/least-evenly-divisor")
+        RequestBuilder request = get("/least-evenly-divisible")
                 .accept(APPLICATION_XML_VALUE);
 
         this.mvc.perform(request)
@@ -68,7 +68,7 @@ public class LeastEvenlyDividableControllerTest {
     public void setRangeUpperNumberWithValidValue() throws Exception {
         String jsonBody = objectMapper.writeValueAsString(new UpperRange(5));
 
-        RequestBuilder request = post("/least-evenly-divisor/upper-range")
+        RequestBuilder request = post("/least-evenly-divisible/upper-range")
                 .content(jsonBody)
                 .contentType(APPLICATION_JSON);
 
@@ -80,7 +80,7 @@ public class LeastEvenlyDividableControllerTest {
     public void setRangeUpperNumberWithInvalidValue() throws Exception {
         String jsonBody = objectMapper.writeValueAsString(new UpperRange(28));
 
-        RequestBuilder request = post("/least-evenly-divisor/upper-range")
+        RequestBuilder request = post("/least-evenly-divisible/upper-range")
                 .content(jsonBody)
                 .contentType(APPLICATION_JSON);
 

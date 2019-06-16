@@ -1,8 +1,8 @@
-package com.rruimor.calculator.leastevenlydividable.controllers;
+package com.rruimor.calculator.leastevenlydivisible.controllers;
 
-import com.rruimor.calculator.leastevenlydividable.domain.CalculationResult;
-import com.rruimor.calculator.leastevenlydividable.models.UpperRange;
-import com.rruimor.calculator.leastevenlydividable.services.LeastEvenlyDividableService;
+import com.rruimor.calculator.leastevenlydivisible.domain.CalculationResult;
+import com.rruimor.calculator.leastevenlydivisible.models.UpperRange;
+import com.rruimor.calculator.leastevenlydivisible.services.LeastEvenlyDividableService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -14,14 +14,14 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.http.MediaType.APPLICATION_XML_VALUE;
 
 @RestController
-@RequestMapping("/least-evenly-divisor")
-public class LeastEvenlyDividableController {
+@RequestMapping("/least-evenly-divisible")
+public class LeastEvenlyDivisibleController {
 
-    private static final Logger LOG = LoggerFactory.getLogger(LeastEvenlyDividableController.class);
+    private static final Logger LOG = LoggerFactory.getLogger(LeastEvenlyDivisibleController.class);
     private LeastEvenlyDividableService leastEvenlyDividableService;
     private UpperRange upperRange;
 
-    public LeastEvenlyDividableController(LeastEvenlyDividableService leastEvenlyDividableService, UpperRange upperRange) {
+    public LeastEvenlyDivisibleController(LeastEvenlyDividableService leastEvenlyDividableService, UpperRange upperRange) {
         this.leastEvenlyDividableService = leastEvenlyDividableService;
         this.upperRange = upperRange;
     }

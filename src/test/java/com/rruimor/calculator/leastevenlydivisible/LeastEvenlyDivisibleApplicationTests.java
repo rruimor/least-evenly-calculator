@@ -1,4 +1,4 @@
-package com.rruimor.calculator.leastevenlydividable;
+package com.rruimor.calculator.leastevenlydivisible;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class LeastEvenlyDividableApplicationTests {
+public class LeastEvenlyDivisibleApplicationTests {
 
 	@Test
 	public void contextLoads() {
