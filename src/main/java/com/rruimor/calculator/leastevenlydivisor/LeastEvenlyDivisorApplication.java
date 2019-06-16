@@ -1,13 +1,13 @@
-package com.europeana.leastevenlycalculator;
+package com.rruimor.calculator.leastevenlydivisor;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LeastevenlycalculatorApplication {
+public class LeastEvenlyDivisorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LeastevenlycalculatorApplication.class, args);
+		SpringApplication.run(LeastEvenlyDivisorApplication.class, args);
 	}
 
 }

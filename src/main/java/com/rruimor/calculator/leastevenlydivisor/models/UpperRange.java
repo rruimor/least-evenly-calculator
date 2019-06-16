@@ -1,4 +1,4 @@
-package com.europeana.leastevenlycalculator.models;
+package com.rruimor.calculator.leastevenlydivisor.models;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -25,5 +25,12 @@ public class UpperRange {
 
     public void setValue(Integer value) {
         this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return "UpperRange{" +
+                "value=" + value +
+                '}';
     }
 }

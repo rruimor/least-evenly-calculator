@@ -1,9 +1,9 @@
-package com.europeana.leastevenlycalculator.utils;
+package com.rruimor.calculator.leastevenlydivisor.utils;
 
 import java.util.Collections;
 import java.util.List;
 
-import static com.europeana.leastevenlycalculator.utils.ListCounter.getFrequency;
+import static com.rruimor.calculator.leastevenlydivisor.utils.ListCounter.getFrequency;
 
 public final class LeastMultipleOfRangeCalculator {
 

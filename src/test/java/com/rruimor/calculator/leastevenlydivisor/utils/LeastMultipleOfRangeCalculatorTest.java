@@ -1,4 +1,4 @@
-package com.europeana.leastevenlycalculator.utils;
+package com.rruimor.calculator.leastevenlydivisor.utils;
 
 import org.junit.Test;
 
