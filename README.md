@@ -59,7 +59,7 @@ As the upper range number is stored in the session, you would need to pass the *
 
 * Curl example request for finding the number:
 ```bash
-$ curl --cookie JSESSIONID=5686C218EE37E7E15DD285037B034D3F -H "Accept: application/json" -X GET http://localhost:8080/least-evenly-divisor
+$ curl --cookie JSESSIONID=<YOUR_JSESSION_ID> -H "Accept: application/json" -X GET http://localhost:8080/least-evenly-divisor
 ```
 
 ```json
@@ -71,7 +71,7 @@ $ curl --cookie JSESSIONID=5686C218EE37E7E15DD285037B034D3F -H "Accept: applicat
 
 * Or in XML:
 ```bash
-$ curl --cookie JSESSIONID=5686C218EE37E7E15DD285037B034D3F -H "Accept: application/xml" -X GET http://localhost:8080/least-evenly-divisor
+$ curl --cookie JSESSIONID=<YOUR_JSESSION_ID> -H "Accept: application/xml" -X GET http://localhost:8080/least-evenly-divisor
 ```
 
 ```xml
