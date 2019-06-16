@@ -1,6 +1,6 @@
 package com.europeana.leastevenlycalculator.controllers;
 
-import com.europeana.leastevenlycalculator.domain.UpperNumberRequest;
+import com.europeana.leastevenlycalculator.models.UpperRange;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -12,15 +12,21 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/range")
+@RequestMapping("/upper-range")
 public class RangeController {
 
     private static final Logger LOG = LoggerFactory.getLogger(RangeController.class);
+    private UpperRange upperRange;
 
-    @PostMapping("/upper-number")
-    ResponseEntity setRangeUpperNumber(@Valid @RequestBody UpperNumberRequest request) {
-        LOG.info("Request with body {}", request);
-        return ResponseEntity.ok(null);
+    public RangeController(UpperRange upperRange) {
+        this.upperRange = upperRange;
     }
 
+    @PostMapping
+    ResponseEntity setRangeUpperNumber(@Valid @RequestBody UpperRange request) {
+        LOG.info("Request with body {}", request);
+        this.upperRange.setValue(request.getValue());
+        LOG.info("New upper number set to {}", this.upperRange.getValue());
+        return ResponseEntity.ok(null);
+    }
 }

@@ -13,12 +13,12 @@ public final class LeastMultipleOfRangeCalculator {
         List<Integer> resultFactors = Collections.emptyList();
 
         for (int i = 1; i <= upperRange; i++) {
-            resultFactors = mergeFactors(resultFactors, FactorsExtractor.extractFactors(i));
+            resultFactors = mergeMaximumMultiplicityFactors(resultFactors, FactorsExtractor.extractFactors(i));
         }
         return resultFactors.stream().mapToLong(value -> value).reduce(1L, (subtotal, element) -> subtotal * element);
     }
 
-    private static List<Integer> mergeFactors(List<Integer> existingFactors, List<Integer> newFactors) {
+    private static List<Integer> mergeMaximumMultiplicityFactors(List<Integer> existingFactors, List<Integer> newFactors) {
         if (existingFactors.isEmpty()) return newFactors;
 
         for (int i = 0; i < newFactors.size(); i++) {
